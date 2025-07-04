@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pehraavini</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #fff8f0; padding: 20px; }
+    header { display: flex; justify-content: space-between; align-items: center; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+    .product-card { background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 15px; }
+    img { width: 100%; height: 250px; object-fit: cover; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pehraavini</h1>
+    <button onclick="login()">Admin Login</button>
+  </header>
+
+  <section id="admin-panel" style="margin-bottom: 30px; display: none;">
+    <h2>Add New Product</h2>
+    <input id="name" placeholder="Name"><br><br>
+    <textarea id="description" placeholder="Description"></textarea><br><br>
+    <input id="price" placeholder="Price" type="number"><br><br>
+    <input id="image" type="file" accept="image/*"><br><br>
+    <button onclick="addProduct()">Add Product</button>
+  </section>
+
+  <h2>Our Collection</h2>
+  <div class="product-grid" id="product-list"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
